@@ -13,18 +13,4 @@ set guioptions-=r                 " Don't show right scrollbar
 
 set number
 
-
-filetype plugin indent on
-
-set softtabstop=2
-set shiftwidth=2
-set tabstop=4
-set expandtab
-
-" Needed on some linux distros.
-" see http://www.adamlowe.me/2009/12/vim-destroys-all-other-rails-editors.html
-filetype off 
-call pathogen#helptags()
-call pathogen#runtime_append_all_bundles()
-
 colorscheme vividchalk
