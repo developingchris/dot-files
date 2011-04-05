@@ -3,7 +3,7 @@ require 'rake'
 
 desc "symlink vim files"
 task :default do
-  symlink %w[ vimrc gvimrc vim ]
+  symlink %w[ .vimrc .gvimrc .vim ]
 end
 
 task :bundle do
