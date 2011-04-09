@@ -11,12 +11,14 @@ let mapleader = ","
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+command! W :w
+
 nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>r :w<CR>:!rake<CR>
 
+set guifont=Monaco:h18
 
-set guifont=Monaco|18
 
 set showcmd                       " Display incomplete commands.
 set showmode                      " Display the mode you're in.
@@ -57,7 +59,7 @@ set expandtab
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
- set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
+set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*CapsLockStatusline')?CapsLockStatusline():''}%=%-16(\ %l,%c-%v\ %)%P
 
 " Or use vividchalk
 colorscheme vividchalk
