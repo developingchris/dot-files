@@ -1,0 +1,20 @@
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[user]
+	name = Chris Chandler
+	email = chris@developingchris.com
+[core]
+	autocrlf = true
+	safecrlf = true
+[merge]
+	tool = BeyondCompare3
+[mergetool "BeyondCompare3"]
+	path = C:/Program Files (x86)/Beyond Compare 3/BComp.exe
+	cmd = \"C:/Program Files (x86)/Beyond Compare 3/BComp.exe\" \"$BASE\" \"$LOCAL\" \"$REMOTE\"
+[diff]
+	guitool = beyondcompare3
+[difftool "beyondcompare3"]
+	path = C:/Program Files (x86)/Beyond Compare 3/BComp.exe
