@@ -17,7 +17,7 @@ nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>r :w<CR>:!rake<CR>
 
-set guifont=Monaco:h18
+set guifont=monaco:h14
 
 
 set showcmd                       " Display incomplete commands.
