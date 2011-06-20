@@ -1,5 +1,3 @@
-set nocompatible                  " Must come first because it changes other options.
-
 filetype off 
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
@@ -17,7 +15,11 @@ nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>r :w<CR>:!rake<CR>
 
+imap jk <Esc>
+
 set guifont=monaco:h16
+"set guifont=Menlo\ Regular:h16
+"set guifont=Inconsolata:h16
 
 
 set showcmd                       " Display incomplete commands.
