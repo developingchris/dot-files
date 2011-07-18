@@ -14,7 +14,6 @@ git_bundles = [
   # "git://github.com/timcharper/textile.vim.git",
   # "git://github.com/tpope/vim-git.git",
   # "git://github.com/tpope/vim-haml.git",
-  # "git://github.com/tpope/vim-markdown.git",
   # "git://github.com/tpope/vim-repeat.git",
   # "git://github.com/tpope/vim-surround.git",
   # "git://github.com/tsaleh/vim-align.git",

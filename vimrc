@@ -17,9 +17,9 @@ nmap <silent> <leader>r :w<CR>:!rake<CR>
 
 imap jk <Esc>
 
-set guifont=monaco:h16
+"set guifont=monaco:h16
 "set guifont=Menlo\ Regular:h16
-"set guifont=Inconsolata:h16
+set guifont=Inconsolata:h18
 
 
 set showcmd                       " Display incomplete commands.
