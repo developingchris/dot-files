@@ -13,7 +13,8 @@ command! W :w
 
 nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
-nmap <silent> <leader>r :w<CR>:!rake<CR>
+"nmap <silent> <leader>r :w<CR>:!rake<CR>
+nmap <silent> <leader>r :w<CR>:Rake<CR>
 
 "imap jk <Esc>
 
