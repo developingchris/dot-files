@@ -9,6 +9,8 @@ git_bundles = [
   "git://github.com/tpope/vim-fugitive.git",
   "git://github.com/tpope/vim-rails.git",
   "git://github.com/plasticboy/vim-markdown.git",
+"git://github.com/kien/ctrlp.vim.git",
+  #"git://git.wincent.com/command-t.git",
   # "git://github.com/msanders/snipmate.vim.git",
   # "git://github.com/astashov/vim-ruby-debugger.git",
   # "git://github.com/timcharper/textile.vim.git",

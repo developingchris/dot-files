@@ -2,6 +2,8 @@ filetype off
 call pathogen#helptags()
 call pathogen#runtime_append_all_bundles()
 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 syntax enable                     " Turn on syntax highlighting.
 filetype plugin indent on         " Turn on file type detection.
 
@@ -13,12 +15,13 @@ command! W :w
 
 nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
+nmap <silent> <leader>f :CtrlP<CR>
 nmap <silent> <leader>r :w<CR>:!ruby %<CR>
 "nmap <silent> <leader>r :w<CR>:!rake<CR>
 "nmap <silent> <leader>r :w<CR>:Rake<CR>
 "nmap <silent> <leader>cs :w<CR>!gcs %<CR>
 
-
+let g:ctrlp_prompt_mappings = { 'AcceptSelection("v")': ['<c-s>', '<RightMouse>'], 'AcceptSelection("h")': ['<c-x>', '<c-cr>' ]}
 "imap jk <Esc>
 
 "set guifont=monaco:h16
