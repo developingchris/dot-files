@@ -13,8 +13,11 @@ command! W :w
 
 nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
+nmap <silent> <leader>r :w<CR>:!ruby %<CR>
 "nmap <silent> <leader>r :w<CR>:!rake<CR>
-nmap <silent> <leader>r :w<CR>:Rake<CR>
+"nmap <silent> <leader>r :w<CR>:Rake<CR>
+"nmap <silent> <leader>cs :w<CR>!gcs %<CR>
+
 
 "imap jk <Esc>
 
@@ -66,6 +69,7 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{fugitive#statusline()}%{exists('*Cap
 
 " Or use vividchalk
 colorscheme vividchalk
+
 
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
