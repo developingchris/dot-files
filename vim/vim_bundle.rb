@@ -22,6 +22,7 @@ git_bundles = [
   # "git://github.com/tsaleh/vim-shoulda.git",
   # "git://github.com/tsaleh/vim-supertab.git",
   # "git://github.com/tsaleh/vim-tcomment.git",
+  "git://github.com/groenewege/vim-less.git",
 ]
 
 require 'fileutils'

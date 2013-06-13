@@ -20,6 +20,15 @@ nmap <silent> <leader>r :w<CR>:!ruby %<CR>
 "nmap <silent> <leader>r :w<CR>:!rake<CR>
 "nmap <silent> <leader>r :w<CR>:Rake<CR>
 "nmap <silent> <leader>cs :w<CR>!gcs %<CR>
+function! NumberToggle()
+  if(&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+
+nnoremap <C-n> :call NumberToggle()<cr>
 
 let g:ctrlp_prompt_mappings = { 'AcceptSelection("v")': ['<c-s>', '<RightMouse>'], 'AcceptSelection("h")': ['<c-x>', '<c-cr>' ]}
 "imap jk <Esc>
