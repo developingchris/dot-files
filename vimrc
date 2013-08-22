@@ -17,6 +17,7 @@ nmap <leader>w <C-w><C-w>
 nmap <silent> <leader>t :NERDTreeToggle<CR>
 nmap <silent> <leader>f :CtrlP<CR>
 nmap <silent> <leader>r :w<CR>:!ruby %<CR>
+nnoremap <leader><leader> <c-^>
 "nmap <silent> <leader>r :w<CR>:!rake<CR>
 "nmap <silent> <leader>r :w<CR>:Rake<CR>
 "nmap <silent> <leader>cs :w<CR>!gcs %<CR>
@@ -99,3 +100,24 @@ colorscheme vividchalk
 
 " For the MakeGreen plugin and Ruby RSpec. Uncomment to use.
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
+"               .,-:;//;:=,
+"           . :H@@@MM@M#H/.,+%;,
+"        ,/X+ +M@@M@MM%=,-%HMMM@X/,
+"      -+@MM; $M@@MH+-,;XMMMM@MMMM@+-
+"     ;@M@@M- XM@X;. -+XXXXXHHH@M@M#@/.
+"   ,%MM@@MH ,@%=             .---=-=:=,.
+"   =@#@@@MX.,                -%HX$$%%%:;
+"  =-./@M@M$                   .;@MMMM@MM:
+"  X@/ -$MM/                    . +MM@@@M$
+" ,@M@H: :@:                    . =X#@@@@-
+" ,@@@MMX, .                    /H- ;@M@M=
+" .H@@@@M@+,                    %MM+..%#$.
+"  /MMMM@MMH/.                  XM@MH; =;
+"   /%+%$XHH@$=              , .H@@@@MX,
+"    .=--------.           -%H.,@@@@@MX,
+"    .%MM@@@HHHXX$$$%+- .:$MMX =M@@MM%.
+"      =XMMM@MM@MM#H;,-+HMM@M+ /MMMX=
+"        =%@M@M#@$-.=$@MM@@@M; %M%=
+"          ,:+$+-,/H#MMMMMMM@= =,
+"                =++%%%%+/:-.
+
