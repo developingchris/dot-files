@@ -1,8 +1,33 @@
 [user]
-	name = Chris Chandler
-	email = chris@developingchris.com
+  name = Chris Chandler
+  email = chris@developingchris.com
 [alias]
-	st = status
-	co = checkout
-	ci = commit
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  st = status
+  co = checkout
+  ci = commit
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+  ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+  pullr = pull --rebase
+  up = !git pull --rebase --prune $@ && git submodule update --init --recursive
+  cob = checkout -b
+  cm = !git add -A && git commit -m
+  save = !git add -A && git commit -m 'SAVEPOINT'
+  wip = !git add -u && git commit -m "WIP" 
+  undo = reset HEAD~1 --mixed
+  amend = commit -a --amend
+  wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  prod = diff --name-status tags/production 
+[core]
+  editor = mvim -f
+[diff]
+  tool = kdiff3
+[merge]
+  tool = kdiff3
+[mergetool "kdiff3"]
+  path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+[color]
+  diff = auto
+[push]
+	default = simple
