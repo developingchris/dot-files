@@ -2,6 +2,9 @@
 export DOTPATH=$HOME/.dotfiles
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
+autoload -Uz compinit
+compinit
+
 # your project folder that we can `c [tab]` to
 export PROJECTS=~/repos
 
@@ -15,7 +18,7 @@ fi
 
 # all of our zsh files
 typeset -U config_files
-config_files=($ZSH/**/*.zsh)
+config_files=($DOTPATH/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
