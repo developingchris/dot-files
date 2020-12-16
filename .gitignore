@@ -1,2 +1,4 @@
 vim/bundle
 vim/.netrwhist
+.oh-my-zsh
+git/gitconfig.local.symlink
