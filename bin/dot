@@ -41,7 +41,7 @@ done
 export DOTPATH=$HOME/.dotfiles
 
 # # Set macOS defaults
-# $DOTPATH/macos/set-defaults.sh
+$DOTPATH/macos/set-defaults.sh
 
 # Install homebrew
 $DOTPATH/homebrew/install.sh 2>&1
