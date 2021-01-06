@@ -61,8 +61,9 @@ nmap <leader>a :Ack<space>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>d :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
-nmap <leader>t :CtrlP<CR>
-nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+" nmap <leader>t :CtrlP<CR>
+" nmap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+nmap <leader>t :Files<CR>
 nmap <leader>] :TagbarToggle<CR>
 nmap <leader><space> :call whitespace#strip_trailing()<CR>
 nmap <leader>g :GitGutterToggle<CR>
@@ -110,12 +111,20 @@ endif
 
 
 " Chris mods for max awesome
+"
+"
+  " If installed using Homebrew
+  set rtp+=/usr/local/opt/fzf
+
+  " If installed using git
+  set rtp+=~/.fzf
   nnoremap <silent> <leader>w <C-w><C-w>
   " nmap <leader>c<space> <Plug>CommentaryLine
   nmap <silent> <leader>ev :e $MYVIMRC<CR>
   nmap <Leader>b :w<CR>!rubocop -ax %<CR>
   map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
   nnoremap <leader><leader> <c-^>
+  nnoremap cp :let @" = expand("%")<cr>
 
   command! W :w
 

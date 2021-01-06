@@ -44,3 +44,5 @@ Bundle 'tpope/vim-vividchalk'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'vim-scripts/kwbdi.vim'
 Bundle 'vim-scripts/matchit.zip'
+" Plug" Bundle 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Bundle 'junegunn/fzf.vim'
