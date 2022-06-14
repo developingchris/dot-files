@@ -23,6 +23,7 @@
   up = !git pull --rebase --prune $@ && git submodule update --init --recursive
   wip = !git add -u && git commit -m "WIP"
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
+  blatest = branch --sort=committerdate
 [core]
   editor = mvim -f
 [diff]
