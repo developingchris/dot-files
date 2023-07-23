@@ -4,19 +4,48 @@ set nocompatible
 " enable syntax highlighting
 syntax enable
 
-" configure Vundle
 filetype on " without this vim emits a zero exit status, later, because of :ft off
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
 
-" install Vundle bundles
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+" install vim plugins bundles
+call plug#begin()
 
-" ensure ftdetect et al work by including this after the Vundle stuff
-filetype plugin indent on
+" Plug 'AutoTag'
+Plug 'bogado/file-line'
+Plug 'gmarik/vundle'
+Plug 'groenewege/vim-less'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kien/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+Plug 'nono/vim-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'prettier/vim-prettier'
+Plug 'rhysd/clever-f.vim'
+Plug 'rizzatti/dash.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-cucumber'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-vividchalk'
+Plug 'vim-ruby/vim-ruby'
+Plug 'vim-scripts/kwbdi.vim'
+Plug 'vim-scripts/matchit.zip'
+Plug 'axelf4/vim-strip-trailing-whitespace'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
+call plug#end()
+
+set rtp+=/usr/local/opt/fzf
 
 set autoindent
 set autoread                                                 " reload files when changed on disk, i.e. via `git checkout`
@@ -132,7 +161,7 @@ endif
   set incsearch                     " Highlight matches as you type.
   set hlsearch                      " Highlight matches.
   set hidden
-  set guifont=Inconsolata:h18
+  set guifont=Monaco:h15
   set antialias                     " MacVim: smooth fonts.
   set encoding=utf-8                " Use UTF-8 everywhere.
   set guioptions-=T                 " Hide toolbar.

@@ -25,17 +25,23 @@
   wipe = !git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard
   blatest = branch --sort=committerdate
 [core]
-  editor = mvim -f
-[diff]
-  tool = kdiff3
-  renameLimit = 3000
-[merge]
-  tool = kdiff3
-[mergetool "kdiff3"]
-  path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
-  keepBackup = false
+  editor = gvim -f
 [color]
   diff = auto
+[diff]
+  tool = meld
+[difftool]
+  prompt = false
+[difftool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
+[merge]
+  tool = meld
+[mergetool]
+  prompt = false
+[mergetool "meld"]
+  trustExitCode = true
+  cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
 [push]
 	default = current
 [pager]
