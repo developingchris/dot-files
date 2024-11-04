@@ -2,3 +2,4 @@ vim/bundle
 vim/.netrwhist
 .oh-my-zsh
 git/gitconfig.local.symlink
+homebrew/Brewfile.lock.json
