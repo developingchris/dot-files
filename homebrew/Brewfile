@@ -1,6 +1,5 @@
 brew 'ripgrep'
 brew 'jq'
-brew 'lastpass-cli'
-brew 'kdiff3'
 brew 'yq'
 brew 'xsv'
+cask "macvim"
