@@ -2,4 +2,7 @@ brew 'ripgrep'
 brew 'jq'
 brew 'yq'
 brew 'xsv'
-cask "macvim"
+cask 'macvim'
+cask 'kdiff3'
+brew 'gh'
+brew 'glab'
