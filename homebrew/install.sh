@@ -1,10 +1,26 @@
 #!/bin/sh
+#
+# Homebrew
+#
+# This installs some of the common dependencies needed (or at least desired)
+# using Homebrew.
 
-echo "  Installing Homebrew for you."
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Check for Homebrew
+if test ! $(which brew)
+then
+  echo "  Installing Homebrew for you."
 
-eval "$(/opt/homebrew/bin/brew shellenv)"
+  # Install the correct homebrew for each OS type
+  if test "$(uname)" = "Darwin"
+  then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  fi
+fi
 
-brew bundle
+if test $(which brew)
+then
+  brew bundle
+fi
 
 exit 0
