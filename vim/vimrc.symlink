@@ -43,6 +43,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
 set rtp+=/usr/local/opt/fzf
