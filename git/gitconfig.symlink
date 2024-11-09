@@ -36,3 +36,10 @@
         autocorrect = 1
 [pull]
 	rebase = true
+[diff]
+    tool = kdiff3
+[difftool]
+    prompt = false
+[merge]
+    tool = kdiff3
+    conflictstyle = diff3
