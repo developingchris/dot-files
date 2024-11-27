@@ -1,0 +1,15 @@
+#!/usr/bin/env ruby
+require 'open3'
+
+branches = []
+branch_list = 'git branch | grep -v "master" | grep -v "main" '
+stdout, stderr, status = Open3.capture3(branch_list)
+
+stdout.split("\n").each do |b|
+  puts "Clean #{b.strip}? [Y/n]"
+  answer = gets.chomp
+
+  if answer.downcase == "y"
+    system("git branch -D #{b.strip}")
+  end
+end
