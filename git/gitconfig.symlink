@@ -6,7 +6,9 @@
   ci = commit
   cm = !git add -A && git commit -m
   co = checkout
-  cob = checkout -b
+  sw = switch
+  cob = switch -c
+  swc = switch -c
   fzb = !gb | xargs git co
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
@@ -38,8 +40,19 @@
 	rebase = true
 [diff]
     tool = kdiff3
+	guitool = kdiff3
 [difftool]
     prompt = false
 [merge]
-    tool = kdiff3
+	tool = kdiff3
     conflictstyle = diff3
+[rerere]
+	enabled = true
+[maintenance]
+	repo = /Users/chrischandler/repos/infrastructure/ansible
+[mergetool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+	trustExitCode = false
+[difftool "kdiff3"]
+	path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+	trustExitCode = false
