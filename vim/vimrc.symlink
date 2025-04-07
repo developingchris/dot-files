@@ -44,6 +44,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'jwalton512/vim-blade'
 call plug#end()
 
 set rtp+=/usr/local/opt/fzf

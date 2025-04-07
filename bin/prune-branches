@@ -2,7 +2,7 @@
 require 'open3'
 
 branches = []
-branch_list = 'git branch | grep -v "master" | grep -v "main" '
+branch_list = 'git branch | grep -v -e "master" -e "main" -e "production"'
 stdout, stderr, status = Open3.capture3(branch_list)
 
 stdout.split("\n").each do |b|
