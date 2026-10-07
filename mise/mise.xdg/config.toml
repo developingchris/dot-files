@@ -1,0 +1,7 @@
+[settings]
+# use a project's .ruby-version file when one exists
+idiomatic_version_file_enable_tools = ["ruby"]
+
+[tools]
+ruby = "4"
+node = "24"

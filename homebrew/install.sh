@@ -20,7 +20,7 @@ fi
 
 if test $(which brew)
 then
-  brew bundle
+  brew bundle --file="$(dirname "$0")/Brewfile"
 fi
 
 exit 0

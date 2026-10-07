@@ -6,5 +6,10 @@ set -e
 
 cd "$(dirname $0)"/..
 
-# find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+# skip the installers that ship inside the vendored oh-my-zsh checkout, and
+# mise, which `dot` runs on its own before this
+find . -name install.sh -not -path './.oh-my-zsh/*' -not -path './mise/*' | sort | while read installer
+do
+  echo "› ${installer}"
+  sh "${installer}"
+done

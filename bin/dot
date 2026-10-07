@@ -50,6 +50,10 @@ $DOTPATH/homebrew/install.sh 2>&1
 echo "› brew update"
 brew update
 
+# Install mise and the languages it manages, the topic installers rely on it
+echo "› $DOTPATH/mise/install.sh"
+$DOTPATH/mise/install.sh
+
 # Install software
 echo "› $DOTPATH/script/install"
 $DOTPATH/script/install
