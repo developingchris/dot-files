@@ -1,7 +1,4 @@
-if type ag &> /dev/null; then
-    export FZF_DEFAULT_COMMAND='ag -p ~/.fzfignore -g ""'
+if type rg &> /dev/null; then
+    export FZF_DEFAULT_COMMAND='rg --files --hidden --ignore-file ~/.fzfignore --glob "!.git"'
+    export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
-
-# if type gg &> /dev/null; then
-#     export FZF_DEFAULT_COMMAND='ag -p ~/.fzfignore -g ""'
-# fi

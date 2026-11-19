@@ -2,6 +2,9 @@
 export DOTPATH=$HOME/.dotfiles
 export ZSH=$HOME/.dotfiles/.oh-my-zsh
 
+# homebrew first, so topic files can find brew-installed tools (fzf, rg, nvim)
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 autoload -Uz compinit
 compinit
 
@@ -52,10 +55,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/mariadb@10.11/bin:$PATH"
 export PATH="/usr/local/opt/yq@3/bin:$PATH"
-eval "$(~/.local/bin/mise activate zsh)"
 export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"
